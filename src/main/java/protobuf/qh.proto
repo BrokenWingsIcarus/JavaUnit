@@ -1,0 +1,49 @@
+import "eig.proto";
+option java_package = "cn.beepower.fes.msg";
+
+// ---------------- terminal -----------------------
+message MeterRwData {
+    optional int32 slaveId = 100;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+    optional bytes rVA = 1; //A相电压
+    optional bytes rVB = 2; //B相电压
+    optional bytes rVC = 3; //C相电压
+    optional int32 rIA = 4; //A相电流
+    optional int32 rIB = 6; //B相电流
+    optional int32 rIC = 8; //C相电流
+    optional bytes rF = 10; //频率
+    optional bytes rPF = 11; //总功率因数
+    optional int32 rS = 12; //总视在功率
+    optional int32 rEP = 14; //总有功电度
+    optional int32 rEQ = 16; //总无功电度
+    optional int32 rPA = 18; //A相有功功率
+    optional int32 rPB = 20; //B相有功功率
+    optional int32 rPC = 22; //C相有功功率
+    optional int32 rP = 24; //总有功功率
+    optional int32 rQA = 26; //A相无功功率
+    optional int32 rQB = 28; //B相无功功率
+    optional int32 rQC = 30; //C相无功功率
+    optional int32 rQ = 32; //总无功功率
+}
+
+// ---------------- terminal -----------------------
+message BydStorege {
+    optional int32 slaveId = 100;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+    optional bytes rVA = 1; //A相电压
+    optional bytes rVB = 2; //B相电压
+
+}
+
+message BydStorege2 {
+    optional int32 slaveId = 100;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes rVA = 3; //A相电压
+    optional bytes rVB = 4; //B相电压
+
+}
+
