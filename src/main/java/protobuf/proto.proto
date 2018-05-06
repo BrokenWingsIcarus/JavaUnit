@@ -1,0 +1,931 @@
+message    MeterRwData0{
+   optional int32 slaveId=257
+    optional int32 readOrWrite = 101
+    optional uint32 workStatus = 0//机组工作状态:0:初始化1:故障2:停止3:热备4:动态监测5:待机6:运行7:调试　
+}
+
+
+message    MeterRwData1{
+   optional int32 slaveId=258
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 1//机组工作模式:2:P/Q模式　
+}
+
+
+message    MeterRwData2{
+   optional int32 slaveId=259
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 2//机组控制模式:1:远程2:现地手动3:现地自动　
+}
+
+
+message    MeterRwData3{
+   optional int32 slaveId=260
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 3//机组有功功率和:　　
+}
+
+
+message    MeterRwData4{
+   optional int32 slaveId=261
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 4//机组无功功率和:　　
+}
+
+
+message    MeterRwData5{
+   optional int32 slaveId=262
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 5//机组放电有功功率限值:　　
+}
+
+
+message    MeterRwData6{
+   optional int32 slaveId=263
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 6//机组充电有功功率限值:　　
+}
+
+
+message    MeterRwData7{
+   optional int32 slaveId=264
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 7//机组正向无功功率限值:　　
+}
+
+
+message    MeterRwData8{
+   optional int32 slaveId=265
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 8//机组负向无功功率限值:　　
+}
+
+
+message    MeterRwData9{
+   optional int32 slaveId=266
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 9//机组SOC:　　
+}
+
+
+message    MeterRwData10{
+   optional int32 slaveId=1280
+    optional int32 readOrWrite = 102
+    optional uint32 NULL = 10//机组状态控制:2:停止6:运行　
+}
+
+
+message    MeterRwData11{
+   optional int32 slaveId=1281
+    optional int32 readOrWrite = 102
+    optional int32 NULL = 11//机组有功功率目标值:　正数:放电；负数:充电
+}
+
+
+message    MeterRwData12{
+   optional int32 slaveId=1282
+    optional int32 readOrWrite = 102
+    optional int32 NULL = 12//机组无功功率目标值:　　
+}
+
+
+message    MeterRwData13{
+   optional int32 slaveId=1288
+    optional int32 readOrWrite = 102
+    optional uint32 NULL = 13//机组工作模式控制:2:P/Q模式　
+}
+
+
+message    MeterRwData0{
+   optional int32 slaveId=4097
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 0//工作状态:0:初始化1:故障2:停止3:热备4:动态监测5:待机6:运行7:调试　
+}
+
+
+message    MeterRwData1{
+   optional int32 slaveId=4098
+    optional int32 readOrWrite = 101
+    optional uint32 workModel = 1//工作模式:2:P/Q模式　
+}
+
+
+message    MeterRwData2{
+   optional int32 slaveId=4099
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 2//三相有功功率和:　　
+}
+
+
+message    MeterRwData3{
+   optional int32 slaveId=4100
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 3//三相无功功率和:　　
+}
+
+
+message    MeterRwData4{
+   optional int32 slaveId=4101
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 4//三相视在功率和:　　
+}
+
+
+message    MeterRwData5{
+   optional int32 slaveId=4102
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 5//放电有功功率限值:　　
+}
+
+
+message    MeterRwData6{
+   optional int32 slaveId=4103
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 6//充电有功功率限值:　　
+}
+
+
+message    MeterRwData7{
+   optional int32 slaveId=4104
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 7//正向无功功率限值:　　
+}
+
+
+message    MeterRwData8{
+   optional int32 slaveId=4105
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 8//负向无功功率限值:　　
+}
+
+
+message    MeterRwData9{
+   optional int32 slaveId=4106
+    optional int32 readOrWrite = 101
+    optional int32 rIA = 9//A相电流:　　
+}
+
+
+message    MeterRwData10{
+   optional int32 slaveId=4107
+    optional int32 readOrWrite = 101
+    optional int32 rIB = 10//B相电流:　　
+}
+
+
+message    MeterRwData11{
+   optional int32 slaveId=4108
+    optional int32 readOrWrite = 101
+    optional int32 rIC = 11//C相电流:　　
+}
+
+
+message    MeterRwData12{
+   optional int32 slaveId=4109
+    optional int32 readOrWrite = 101
+    optional uint32 rVB = 12//A相电压:　　
+}
+
+
+message    MeterRwData13{
+   optional int32 slaveId=4110
+    optional int32 readOrWrite = 101
+    optional uint32 rVA = 13//B相电压:　　
+}
+
+
+message    MeterRwData14{
+   optional int32 slaveId=4111
+    optional int32 readOrWrite = 101
+    optional uint32 rVC = 14//C相电压:　　
+}
+
+
+message    MeterRwData15{
+   optional int32 slaveId=4112
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 15//AB线电压:　　
+}
+
+
+message    MeterRwData16{
+   optional int32 slaveId=4113
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 16//BC线电压:　　
+}
+
+
+message    MeterRwData17{
+   optional int32 slaveId=4114
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 17//CA线电压:　　
+}
+
+
+message    MeterRwData18{
+   optional int32 slaveId=4115
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 18//系统频率:　　
+}
+
+
+message    MeterRwData19{
+   optional int32 slaveId=4116
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 19//直流电压:　　
+}
+
+
+message    MeterRwData20{
+   optional int32 slaveId=4117
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 20//直流电流:　　
+}
+
+
+message    MeterRwData21{
+   optional int32 slaveId=4118
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 21//直流功率:　　
+}
+
+
+message    MeterRwData22{
+   optional int32 slaveId=4119
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 22//A相IGBT温度:　　
+}
+
+
+message    MeterRwData23{
+   optional int32 slaveId=4120
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 23//B相IGBT温度:　　
+}
+
+
+message    MeterRwData24{
+   optional int32 slaveId=4121
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 24//C相IGBT温度:　　
+}
+
+
+message    MeterRwData25{
+   optional int32 slaveId=4160
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 25//PCS告警信息0:                  详见告警列表1：告警     0：正常      
+}
+
+
+message    MeterRwData26{
+   optional int32 slaveId=4161
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 26//PCS告警信息1:
+}
+
+
+message    MeterRwData27{
+   optional int32 slaveId=4162
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 27//PCS告警信息2:
+}
+
+
+message    MeterRwData28{
+   optional int32 slaveId=4163
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 28//PCS告警信息3:
+}
+
+
+message    MeterRwData29{
+   optional int32 slaveId=4176
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 29//PCS故障信息0:                  详见故障列表1：故障     0：正常      
+}
+
+
+message    MeterRwData30{
+   optional int32 slaveId=4177
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 30//PCS故障信息1:
+}
+
+
+message    MeterRwData31{
+   optional int32 slaveId=4178
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 31//PCS故障信息2:
+}
+
+
+message    MeterRwData32{
+   optional int32 slaveId=4179
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 32//PCS故障信息3:
+}
+
+
+message    MeterRwData33{
+   optional int32 slaveId=4180
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 33//PCS故障信息4:
+}
+
+
+message    MeterRwData34{
+   optional int32 slaveId=4181
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 34//PCS故障信息5:
+}
+
+
+message    MeterRwData0{
+   optional int32 slaveId=20481
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 0//电池堆工作状态:0:初始化1:停止2:正在启动3:运行4:正在停止5:故障　　　　　　
+}
+
+
+message    MeterRwData1{
+   optional int32 slaveId=20482
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 1//电池堆工作模式:0:正常模式　
+}
+
+
+message    MeterRwData2{
+   optional int32 slaveId=20483
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 2//电池堆电压:　　
+}
+
+
+message    MeterRwData3{
+   optional int32 slaveId=20484
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 3//电池堆电流:　　
+}
+
+
+message    MeterRwData4{
+   optional int32 slaveId=20485
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 4//电池堆功率:　　
+}
+
+
+message    MeterRwData5{
+   optional int32 slaveId=20486
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 5//电池堆soc:　　
+}
+
+
+message    MeterRwData6{
+   optional int32 slaveId=20488
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 6//堆充电电流限值:　　
+}
+
+
+message    MeterRwData7{
+   optional int32 slaveId=20489
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 7//堆放电电流限值:　　
+}
+
+
+message    MeterRwData8{
+   optional int32 slaveId=20490
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 8//堆充电功率限值:　　
+}
+
+
+message    MeterRwData9{
+   optional int32 slaveId=20491
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 9//堆放电功率限值:　　
+}
+
+
+message    MeterRwData10{
+   optional int32 slaveId=20492
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 10//电池堆累计充电电能低位:　　
+}
+
+
+message    MeterRwData11{
+   optional int32 slaveId=20493
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 11//电池堆累计充电电能高位:　　
+}
+
+
+message    MeterRwData12{
+   optional int32 slaveId=20494
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 12//电池堆累计放电电能低位:　　
+}
+
+
+message    MeterRwData13{
+   optional int32 slaveId=20495
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 13//电池堆累计放电电能高位:　　
+}
+
+
+message    MeterRwData14{
+   optional int32 slaveId=20496
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 14//电池组使能状态:0:禁止；1:使能每Bit表示一组
+}
+
+
+message    MeterRwData15{
+   optional int32 slaveId=20497
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 15//电池组在网运行状态:0:停止；1:运行每Bit表示一组
+}
+
+
+message    MeterRwData16{
+   optional int32 slaveId=20544
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 16//堆告警信息0:详见告警列表　1:告警；  0:正常　
+}
+
+
+message    MeterRwData17{
+   optional int32 slaveId=20545
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 17//堆告警信息1:
+}
+
+
+message    MeterRwData18{
+   optional int32 slaveId=20546
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 18//堆告警信息2:
+}
+
+
+message    MeterRwData19{
+   optional int32 slaveId=20547
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 19//堆告警信息3:
+}
+
+
+message    MeterRwData20{
+   optional int32 slaveId=20548
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 20//堆告警信息4:
+}
+
+
+message    MeterRwData21{
+   optional int32 slaveId=20549
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 21//堆告警信息5:
+}
+
+
+message    MeterRwData22{
+   optional int32 slaveId=20550
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 22//堆告警信息6:
+}
+
+
+message    MeterRwData23{
+   optional int32 slaveId=20560
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 23//堆故障信息0:详见故障列表1:故障；  0:正常
+}
+
+
+message    MeterRwData24{
+   optional int32 slaveId=20561
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 24//堆故障信息1:
+}
+
+
+message    MeterRwData25{
+   optional int32 slaveId=20562
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 25//堆故障信息2:
+}
+
+
+message    MeterRwData26{
+   optional int32 slaveId=20563
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 26//堆故障信息3:
+}
+
+
+message    MeterRwData27{
+   optional int32 slaveId=20564
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 27//堆故障信息4:
+}
+
+
+message    MeterRwData28{
+   optional int32 slaveId=20565
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 28//堆故障信息5:
+}
+
+
+message    MeterRwData0{
+   optional int32 slaveId=24577
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 0//电池组工作状态:0:初始化1:停止2:正在启动3:运行4:故障　
+}
+
+
+message    MeterRwData1{
+   optional int32 slaveId=24578
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 1//电池组总电压:　　
+}
+
+
+message    MeterRwData2{
+   optional int32 slaveId=24579
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 2//电池组电流:　　
+}
+
+
+message    MeterRwData3{
+   optional int32 slaveId=24580
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 3//电池组SOC:　　
+}
+
+
+message    MeterRwData4{
+   optional int32 slaveId=24582
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 4//电池组平均温度:　　
+}
+
+
+message    MeterRwData5{
+   optional int32 slaveId=24583
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 5//电池组最大电压电池号:　　
+}
+
+
+message    MeterRwData6{
+   optional int32 slaveId=24584
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 6//电池组单节电压最大值:　　
+}
+
+
+message    MeterRwData7{
+   optional int32 slaveId=24585
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 7//电池组最大电压电池温度:　　
+}
+
+
+message    MeterRwData8{
+   optional int32 slaveId=24586
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 8//电池组最小电压电池号:　　
+}
+
+
+message    MeterRwData9{
+   optional int32 slaveId=24587
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 9//电池组单节电压最小值:　　
+}
+
+
+message    MeterRwData10{
+   optional int32 slaveId=24588
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 10//电池组最小电压电池温度:　　
+}
+
+
+message    MeterRwData11{
+   optional int32 slaveId=24589
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 11//电池组最大温度电池号:　　
+}
+
+
+message    MeterRwData12{
+   optional int32 slaveId=24590
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 12//电池组单节温度最大值:　　
+}
+
+
+message    MeterRwData13{
+   optional int32 slaveId=24591
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 13//电池组最大温度电池电压:　　
+}
+
+
+message    MeterRwData14{
+   optional int32 slaveId=24592
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 14//电池组最低温度电池号:　　
+}
+
+
+message    MeterRwData15{
+   optional int32 slaveId=24593
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 15//电池组单节温度最小值:　　
+}
+
+
+message    MeterRwData16{
+   optional int32 slaveId=24594
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 16//电池组最小温度电池电压:　　
+}
+
+
+message    MeterRwData17{
+   optional int32 slaveId=24595
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 17//电池组充电电流限值:　　
+}
+
+
+message    MeterRwData18{
+   optional int32 slaveId=24596
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 18//电池组放电电流限值:　　
+}
+
+
+message    MeterRwData19{
+   optional int32 slaveId=24597
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 19//电池组历史充电电能低位:　　
+}
+
+
+message    MeterRwData20{
+   optional int32 slaveId=24598
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 20//电池组历史充电电能高位:　　
+}
+
+
+message    MeterRwData21{
+   optional int32 slaveId=24599
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 21//电池组历史放电电能低位:　　
+}
+
+
+message    MeterRwData22{
+   optional int32 slaveId=24600
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 22//电池组历史放电电能高位:　　
+}
+
+
+message    MeterRwData23{
+   optional int32 slaveId=24640
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 23//电池组告警0:             详见告警列表0：正常 1：告警
+}
+
+
+message    MeterRwData24{
+   optional int32 slaveId=24641
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 24//电池组告警1:
+}
+
+
+message    MeterRwData25{
+   optional int32 slaveId=24642
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 25//电池组故障0:                 详见故障列表0：正常 1：故障
+}
+
+
+message    MeterRwData26{
+   optional int32 slaveId=24643
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 26//电池组故障1:
+}
+
+
+message    MeterRwData0{
+   optional int32 slaveId=13328
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 0//集装箱浸水状态:　1：浸水发生； 0：浸水消失；
+}
+
+
+message    MeterRwData1{
+   optional int32 slaveId=13329
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 1//集装箱火警状态:　1：火警发生； 0：火警消失；
+}
+
+
+message    MeterRwData2{
+   optional int32 slaveId=13330
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 2//集装箱电控柜急停状态:　1：急停按下； 0：急停旋起；
+}
+
+
+message    MeterRwData3{
+   optional int32 slaveId=13331
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 3//集装箱接地故障状态:　1：接地故障产生； 0：接地故障消失；
+}
+
+
+message    MeterRwData4{
+   optional int32 slaveId=13332
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 4//集装箱柜门状态1:　1：柜门打开； 0：柜门关闭；
+}
+
+
+message    MeterRwData5{
+   optional int32 slaveId=13333
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 5//集装箱柜门状态2:　1：柜门打开； 0：柜门关闭；
+}
+
+
+message    MeterRwData6{
+   optional int32 slaveId=13334
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 6//集装箱空调供电状态:　1：空调供电； 0：空调断电
+}
+
+
+message    MeterRwData7{
+   optional int32 slaveId=13335
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 7//集装箱换气扇状态:　1：换气扇开启； 0：换气扇关闭
+}
+
+
+message    MeterRwData8{
+   optional int32 slaveId=13336
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 8//集装箱风扇状态:　1：风扇开启； 0：风扇关闭
+}
+
+
+message    MeterRwData9{
+   optional int32 slaveId=13337
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 9//保留:　　
+}
+
+
+message    MeterRwData10{
+   optional int32 slaveId=13338
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 10//保留:　　
+}
+
+
+message    MeterRwData11{
+   optional int32 slaveId=13339
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 11//保留:　　
+}
+
+
+message    MeterRwData12{
+   optional int32 slaveId=13340
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 12//PCS仓环境温度:　　
+}
+
+
+message    MeterRwData13{
+   optional int32 slaveId=13341
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 13//电池仓环境温度:　　
+}
+
+
+message    MeterRwData14{
+   optional int32 slaveId=13342
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 14//集装箱外环境温度:　　
+}
+
+
+message    MeterRwData15{
+   optional int32 slaveId=13343
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 15//电控柜顶部环境温度:　　
+}
+
+
+message    MeterRwData16{
+   optional int32 slaveId=13344
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 16//保留:　　
+}
+
+
+message    MeterRwData17{
+   optional int32 slaveId=13345
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 17//保留:　　
+}
+
+
+message    MeterRwData18{
+   optional int32 slaveId=13346
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 18//PCS仓环境湿度:　　
+}
+
+
+message    MeterRwData19{
+   optional int32 slaveId=13347
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 19//电池仓环境湿度:　　
+}
+
+
+message    MeterRwData20{
+   optional int32 slaveId=13348
+    optional int32 readOrWrite = 101
+    optional int32 NULL = 20//集装箱外部湿度:　　
+}
+
+
+message    MeterRwData21{
+   optional int32 slaveId=13376
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 21//ADAS告警0:详见告警列表1:告警；0:正常
+}
+
+
+message    MeterRwData22{
+   optional int32 slaveId=13377
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 22//ADAS告警1:
+}
+
+
+message    MeterRwData23{
+   optional int32 slaveId=13378
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 23//ADAS告警2:
+}
+
+
+message    MeterRwData24{
+   optional int32 slaveId=13392
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 24//ADAS故障0:详见故障列表1:故障；0:正常
+}
+
+
+message    MeterRwData25{
+   optional int32 slaveId=13393
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 25//ADAS故障1:
+}
+
+
+message    MeterRwData26{
+   optional int32 slaveId=13394
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 26//ADAS故障2:
+}
+
+
+message    MeterRwData27{
+   optional int32 slaveId=13395
+    optional int32 readOrWrite = 101
+    optional uint32 NULL = 27//ADAS故障3:
+}
+
+
