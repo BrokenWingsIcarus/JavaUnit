@@ -1,0 +1,37 @@
+message PCSData0 { 
+   optional bytes  workStatus =  4097;
+   optional bytes  workModel =  4098;
+   optional bytes  threePhasePowerSUM =  4099;
+   optional bytes  threePhaseReactivePowerSUM =  4100;
+   optional bytes  threePhaseApparentPowerSUM =  4101;
+   optional bytes  dischargeActivePowerLimit =  4102;
+   optional bytes  chargingActivePowerLimit =  4103;
+   optional bytes  positiveReactivePowerLimit =  4104;
+   optional bytes  negativeReactivePowerLimit =  4105;
+   optional bytes  PhaseCurrentA =  4106;
+   optional bytes  PhaseCurrentB =  4107;
+   optional bytes  PhaseCurrentC =  4108;
+   optional bytes  PhaseVoltageA =  4109;
+   optional bytes  PhaseVoltageB =  4110;
+   optional bytes  PhaseVoltageC =  4111;
+   optional bytes  LineVoltageAB =  4112;
+   optional bytes  LineVoltageBC =  4113;
+   optional bytes  LineVoltageCA =  4114;
+   optional bytes  SystemFrequency =  4115;
+   optional bytes  DCVoltage =  4116;
+   optional bytes  DC =  4117;
+   optional bytes  DCPower =  4118;
+   optional bytes  PhaseIGBTTemperatureA =  4119;
+   optional bytes  PhaseIGBTTemperatureB =  4120;
+   optional bytes  PhaseIGBTTemperatureC =  4121;
+   optional bytes  PCSWaringInfo0 =  4160;
+   optional bytes  PCSWaringInfo1 =  4161;
+   optional bytes  PCSWaringInfo2 =  4162;
+   optional bytes  PCSWaringInfo3 =  4163;
+   optional bytes  PCSFaultInfo0 =  4176;
+   optional bytes  PCSFaultInfo1 =  4177;
+   optional bytes  PCSFaultInfo2 =  4178;
+   optional bytes  PCSFaultInfo3 =  4179;
+   optional bytes  PCSFaultInfo4 =  4180;
+   optional bytes  PCSFaultInfo5 =  4181;
+}

@@ -1,0 +1,16 @@
+message UCData0 { 
+   optional bytes  storegeBoxWorkStatus =  257;
+   optional int32  storegeBoxWorkModel =  258;
+   optional bytes  storegeBoxControlModel =  259;
+   optional bytes  storegeBoxActivePowerSum =  260;
+   optional bytes  storegeBoxReactivePowerSum =  261;
+   optional bytes  storegeBoxDischargeActivePowerLimit =  262;
+   optional bytes  storegeBoxChargingActivePowerLimit =  263;
+   optional bytes  storegeBoxPositiveReactivePowerLimit =  264;
+   optional bytes  storegeBoxNegativeReactivePowerLimit =  265;
+   optional bytes  storegeBoxSOC =  266;
+   optional bytes  storegeBoxStatusControl =  1280;
+   optional bytes  storegeBoxActivePowerTargetValue =  1281;
+   optional bytes  storegeBoxReactivePowerTargetValue =  1282;
+   optional bytes  =storegeBoxOperationModeControl =  1288;
+}
