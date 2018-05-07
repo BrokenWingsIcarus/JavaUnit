@@ -1,16 +1,14 @@
 package utils;
 
-import bean.Message;
+import bean.Analog;
+import com.sun.security.ntlm.Client;
+import org.apache.poi.OldFileFormatException;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableCell;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 /**
  * @author A18ccms a18ccms_gmail_com
@@ -34,18 +32,36 @@ public class FileUtils {
         return  rows;
     }
 
-    public static  void outNewProto(String path, ArrayList<Message[]> messages) throws IOException {
+    public static Map<String,String> getVarName(String path) throws IOException {
+        Properties properties = new Properties();
+        InputStream inputStream = new FileInputStream(path);
+        properties.load((new InputStreamReader(inputStream, "UTF-8")));
+        Set<Object> objects = properties.keySet();
+        Map<String,String> map = new HashMap<>();
+        for (Object o : objects) {
+           map.put((String)o, (String) properties.get(o));
+        }
+        return  map;
+    }
+
+    public static  void outNewProto(String path, Analog[] Analogs,int iteratorSize,String addressOffset,String messageType) throws IOException {
         File file = new File(System.getProperty("user.dir")+"/src/main/java/" + path);
         if(file.createNewFile()) {
             BufferedWriter out = new BufferedWriter(new FileWriter(file));
-            for (Message[] message : messages) {
-                for (Message message1 : message) {
-                    System.out.println(message1.toString());
-                    out.write(message1.toString());
+           for (int i =  0 ; i < iteratorSize; i ++) {
+                out.write("message " +  messageType + i + " { \r\n");
+                for (Analog analog : Analogs) {
+                    if(i != 0  && addressOffset != null) {
+                        System.out.println(Integer.decode(addressOffset));
+                        analog.setDevCode(Integer.parseInt(analog.getDevCode())+ Integer.decode(addressOffset));
+                    }
+                    System.out.println(analog.toString());
+                    out.write(analog.toString());
                 }
-            }
-            out.flush();
-            out.close();
+                out.write("}\r\n");
+           }
+           out.flush();
+           out.close();
         } else  {
             System.out.println("创建proto文件失败");
         }

@@ -1,4 +1,5 @@
-import bean.Message;
+import bean.Analog;
+import org.apache.commons.collections.MapUtils;
 import org.apache.poi.POIXMLDocument;
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
@@ -8,6 +9,8 @@ import utils.ProtoContentBuilder;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author A18ccms a18ccms_gmail_com
@@ -28,8 +31,12 @@ public class MAIN1
                 ProtoContentBuilder protoContentBuilder = new ProtoContentBuilder();
                 OPCPackage opcPackage = POIXMLDocument.openPackage(path);
                 XWPFDocument xdoc = new XWPFDocument(opcPackage);
-                ArrayList<Message[]> messages = ProtoContentBuilder.createMessages(xdoc.getTables(),xdoc.getParagraphs());
-                FileUtils.outNewProto("protobuf/" +"proto.proto",messages);
+                Map<String, String> varName = FileUtils.getVarName("D:\\IDEAHome\\IDEAWORK\\untitled1\\src\\main\\resources\\input.properties");
+                ArrayList<Analog[]> analogs = ProtoContentBuilder.createAnalogs(xdoc.getTables(),varName);
+                FileUtils.outNewProto("protobuf/" +"UC.proto",analogs.get(0),1,null,"UCData");
+                FileUtils.outNewProto("protobuf/"+"PCS.proto",analogs.get(1),1,"0x200","PCSData");
+                FileUtils.outNewProto("protobuf/" +"BECU.proto",analogs.get(2),7,"0x200","BSMUData");
+                FileUtils.outNewProto("protobuf/"+"BSMU.proto",analogs.get(3),28, "0x800","BECUData");
             }
         }
     }

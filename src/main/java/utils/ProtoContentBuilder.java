@@ -1,13 +1,14 @@
 package utils;
 
 
-import bean.Message;
+import bean.Analog;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author A18ccms a18ccms_gmail_com
@@ -17,41 +18,30 @@ import java.util.List;
  */
 public class ProtoContentBuilder {
 
-    private static Message[] messages;
+    private static Analog[] Analog;
 
     public ProtoContentBuilder(){
 
     }
 
-    /**
-     * 地址(HEX)	读写属性	名称	数据属性	系数	单位	含义	备注
-     * @param tables
-     * @param paragraphs
-     * @return
-     */
-
-    public static ArrayList<Message[]> createMessages(List<XWPFTable> tables, List<XWPFParagraph> paragraphs) throws UnsupportedEncodingException {
-        ArrayList<Message[]> tableMessage = new ArrayList<>();
+    public static ArrayList<Analog[]> createAnalogs(List<XWPFTable> tables, Map<String, String> varName) throws UnsupportedEncodingException {
+        ArrayList<Analog[]> tableMessage = new ArrayList<>();
         System.out.println(tables.size());
         for (XWPFTable table : tables) {
-
             List<ArrayList<String>> rows = FileUtils.rowContent(table);
-                messages = new Message[rows.size()];
+             Analog = new Analog[rows.size()];
             for (int i = 0; i < rows.size(); i++){
-                messages[i]  = new Message();
+                Analog[i]  = new Analog();
                 ArrayList<String> list = rows.get(i);
-                messages[i].setClassName("MeterRwData"+i);
-                System.out.println(list.get(0));
+                Analog[i].setDevCode(Integer.decode(list.get(0)));
+                Analog[i].setType(list.get(3));
+                Analog[i].setName(varName.get(list.get(2)));
                 String s = list.get(0);
                 if(s.length() == 0) {
-                    System.out.println("-------------------\n" + list.get(i)+ messages);
+                    System.out.println("-------------------\n" + list.get(i)+ Analog);
                 }
-                messages[i].setSlaveid(Integer.decode(list.get(0)));
-                messages[i].setReadOrWrite(new String(list.get(1).getBytes(),"UTF-8"));
-                messages[i].setProperty("optional",list.get(3),list.get(2), String.valueOf(i),  list.get(2)+":"+list.get(6)+ list.get(7));
-                messages[i].setEnd();
             }
-            tableMessage.add(messages);
+            tableMessage.add(Analog);
         }
         return tableMessage;
     }
