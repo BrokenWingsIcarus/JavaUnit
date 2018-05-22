@@ -1,0 +1,16 @@
+message Stack010 { 
+
+   optional int32 slaveId=10001;
+   optional int32 readOrWrite=10101;
+   optional string terminalId=10102;
+
+   optional bytes  rBatteryStackStatus =  2;
+   optional float  rBatteryStackSOC =  3;
+   optional float  rBatteryStackSOH =  5;
+   optional float  rBatteryStackRechargeable =  7;
+   optional float  rBatteryStackDischargeCapacity =  9;
+   optional float  rAccumulatorBatteryChargeAccumulationValue =  11;
+   optional float  AccumulativeValueOfBatteryStackDischarge =  13;
+   optional float  BatteryStackTotalVoltage =  15;
+   optional float  rBatteryStackTotalCurrent =  17;
+}

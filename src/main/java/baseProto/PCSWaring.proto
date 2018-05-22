@@ -1,0 +1,9 @@
+message PCSWaringExceptionMessage0 {
+   optional int32 slaveId = 100;
+   optional int32 readOrWrite = 101;
+   optional string terminalId = 102;
+   optional bytes  rPCSWaringInfo0 =  4161;
+   optional bytes  rPCSWaringInfo1 =  4162;
+   optional bytes  rPCSWaringInfo2 =  4163;
+   optional bytes  rPCSWaringInfo3 =  4164;
+}

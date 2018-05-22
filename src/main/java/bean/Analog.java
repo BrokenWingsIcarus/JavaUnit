@@ -21,7 +21,7 @@ public class Analog {
     }
 
     public void setType(String type) {
-        this.type = ProtoUtils.getType(type);
+        this.type = type;
     }
 
     public String getName() {
