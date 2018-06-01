@@ -27,23 +27,692 @@ message MeterRwData {
     optional int32 rQ = 32; //总无功功率
 }
 
-// ---------------- terminal -----------------------
-message BydStorege {
-    optional int32 slaveId = 100;
-    optional int32 readOrWrite = 101;
-    optional string terminalId = 102;
-    optional bytes rVA = 1; //A相电压
-    optional bytes rVB = 2; //B相电压
 
-}
-
-message BydStorege2 {
-    optional int32 slaveId = 100;
+// ****************************** UC ***********************************
+message UCData01 {
+    optional int32 slaveId = 1;
     optional int32 readOrWrite = 101;
     optional string terminalId = 102;
 
-    optional bytes rVA = 3; //A相电压
-    optional bytes rVB = 4; //B相电压
-
+    optional bytes  rOperationModeControl =  1289;
 }
 
+message UCData02 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rWorkStatus =  258;
+    optional bytes  rWorkModel =  259;
+    optional bytes  rControlModel =  260;
+    optional bytes  rActivePowerSum =  261;
+    optional bytes  rReactivePowerSum =  262;
+    optional bytes  rDischargeActivePowerLimit =  263;
+    optional bytes  rChargingActivePowerLimit =  264;
+    optional bytes  rPositiveReactivePowerLimit =  265;
+    optional bytes  rNegativeReactivePowerLimit =  266;
+    optional bytes  rSOC =  267;
+}
+
+
+message UCData03 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rStatusControl =  1281;
+    optional bytes  rActivePowerTargetValue =  1282;
+    optional bytes  rReactivePowerTargetValue =  1283;
+}
+
+//14
+// ****************************** PCS ***********************************
+
+message PCSData01 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rWorkStatus =  4098;
+    optional bytes  rWorkModel =  4099;
+    optional bytes  rThreePhasePowerSUM =  4100;
+    optional bytes  rThreePhaseReactivePowerSUM =  4101;
+    optional bytes  rThreePhaseApparentPowerSUM =  4102;
+    optional bytes  rDischargeActivePowerLimit =  4103;
+    optional bytes  rChargingActivePowerLimit =  4104;
+    optional bytes  rCositiveReactivePowerLimit =  4105;
+    optional bytes  rNegativeReactivePowerLimit =  4106;
+    optional bytes  rPhaseCurrentA =  4107;
+    optional bytes  rPhaseCurrentB =  4108;
+    optional bytes  rPhaseCurrentC =  4109;
+    optional bytes  rPhaseVoltageA =  4110;
+    optional bytes  rPhaseVoltageB =  4111;
+    optional bytes  rPhaseVoltageC =  4112;
+    optional bytes  rLineVoltageAB =  4113;
+    optional bytes  rLineVoltageBC =  4114;
+    optional bytes  rLineVoltageCA =  4115;
+    optional bytes  rSystemFrequency =  4116;
+    optional bytes  rDCVoltage =  4117;
+    optional bytes  rDC =  4118;
+    optional bytes  rDCPower =  4119;
+    optional bytes  rPhaseIGBTTemperatureA =  4120;
+    optional bytes  rPhaseIGBTTemperatureB =  4121;
+    optional bytes  rPhaseIGBTTemperatureC =  4122;
+}
+
+
+message PCSData02 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rPCSWaringInfo0 =  4161;
+    optional bytes  rPCSWaringInfo1 =  4162;
+    optional bytes  rPCSWaringInfo2 =  4163;
+    optional bytes  rPCSWaringInfo3 =  4164;
+}
+
+message PCSData03 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rPCSFaultInfo0 =  4177;
+    optional bytes  rPCSFaultInfo1 =  4178;
+    optional bytes  rPCSFaultInfo2 =  4179;
+    optional bytes  rPCSFaultInfo3 =  4180;
+    optional bytes  rPCSFaultInfo4 =  4181;
+    optional bytes  rPCSFaultInfo5 =  4182;
+}
+
+// ******************************BSMU ***********************************
+
+
+message BSMUData010 {
+
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryStackWorkingStatus =  20482;
+    optional bytes  rBatteryStackWorkingModel =  20483;
+    optional bytes  rStackVoltage =  20484;
+    optional bytes  rBatteryStackCurrent =  20485;
+    optional bytes  rBatteryPower =  20486;
+    optional bytes  rBatterySOC =  20487;
+}
+message BSMUData011 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryStackWorkingStatus =  20994;
+    optional bytes  rBatteryStackWorkingModel =  20995;
+    optional bytes  rStackVoltage =  20996;
+    optional bytes  rBatteryStackCurrent =  20997;
+    optional bytes  rBatteryPower =  20998;
+    optional bytes  rBatterySOC =  20999;
+}
+message BSMUData012 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryStackWorkingStatus =  21506;
+    optional bytes  rBatteryStackWorkingModel =  21507;
+    optional bytes  rStackVoltage =  21508;
+    optional bytes  rBatteryStackCurrent =  21509;
+    optional bytes  rBatteryPower =  21510;
+    optional bytes  rBatterySOC =  21511;
+}
+
+message BSMUData013 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryStackWorkingStatus =  22018;
+    optional bytes  rBatteryStackWorkingModel =  22019;
+    optional bytes  rStackVoltage =  22020;
+    optional bytes  rBatteryStackCurrent =  22021;
+    optional bytes  rBatteryPower =  22022;
+    optional bytes  rBatterySOC =  22023;
+}
+
+message BSMUData020 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rStackChargingCurrentLimit   =  20489;
+    optional bytes  rStackDischargCurrentLimit =  20490;
+    optional bytes  rStackChargingPowerLimit =  20491;
+    optional bytes  rStackDischargePowerLimit =  20492;
+    optional bytes  rBatteryStackCumulativeChargingPowerLow =  20493;
+    optional bytes  rBatteryStackCumulativeChargingEnergyHigh =  20494;
+    optional bytes  rBatteryStackCumulativeDischargeLowElectricEnergy =  20495;
+    optional bytes  rBatteryStackCumulativeDischargeEnergyHigh =  20496;
+    optional bytes  rBatteryPackStatus =  20497;
+    optional bytes  rBatteryPacInNetworkOperation =  20498;
+
+}
+message BSMUData021 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rStackChargingCurrentLimit   =  21001;
+    optional bytes  rStackDischargCurrentLimit =  21002;
+    optional bytes  rStackChargingPowerLimit =  21003;
+    optional bytes  rStackDischargePowerLimit =  21004;
+    optional bytes  rBatteryStackCumulativeChargingPowerLow =  21005;
+    optional bytes  rBatteryStackCumulativeChargingEnergyHigh =  21006;
+    optional bytes  rBatteryStackCumulativeDischargeLowElectricEnergy =  21007;
+    optional bytes  rBatteryStackCumulativeDischargeEnergyHigh =  21008;
+    optional bytes  rBatteryPackStatus =  21009;
+    optional bytes  rBatteryPacInNetworkOperation =  21010;
+}
+message BSMUData022 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rStackChargingCurrentLimit   =  21513;
+    optional bytes  rStackDischargCurrentLimit =  21514;
+    optional bytes  rStackChargingPowerLimit =  21515;
+    optional bytes  rStackDischargePowerLimit =  21516;
+    optional bytes  rBatteryStackCumulativeChargingPowerLow =  21517;
+    optional bytes  rBatteryStackCumulativeChargingEnergyHigh =  21518;
+    optional bytes  rBatteryStackCumulativeDischargeLowElectricEnergy =  21519;
+    optional bytes  rBatteryStackCumulativeDischargeEnergyHigh =  21520;
+    optional bytes  rBatteryPackStatus =  21521;
+    optional bytes  rBatteryPacInNetworkOperation =  21522;
+}
+message BSMUData023 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rStackChargingCurrentLimit   =  22025;
+    optional bytes  rStackDischargCurrentLimit =  22026;
+    optional bytes  rStackChargingPowerLimit =  22027;
+    optional bytes  rStackDischargePowerLimit =  22028;
+    optional bytes  rBatteryStackCumulativeChargingPowerLow =  22029;
+    optional bytes  rBatteryStackCumulativeChargingEnergyHigh =  22030;
+    optional bytes  rBatteryStackCumulativeDischargeLowElectricEnergy =  22031;
+    optional bytes  rBatteryStackCumulativeDischargeEnergyHigh =  22032;
+    optional bytes  rBatteryPackStatus =  22033;
+    optional bytes  rBatteryPacInNetworkOperation =  22034;
+}
+
+message BSMUData030 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rHeapWarnInfo0 =  20545;
+    optional bytes  rHeapWarnInfo1 =  20546;
+    optional bytes  rHeapWarnInfo2 =  20547;
+    optional bytes  rHeapWarnInfo3 =  20548;
+    optional bytes  rHeapWarnInfo4 =  20549;
+    optional bytes  rHeapWarnInfo5 =  20550;
+    optional bytes  rHeapWarnInfo6 =  20551;
+}
+message BSMUData031 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rHeapWarnInfo0 =  21057;
+    optional bytes  rHeapWarnInfo1 =  21058;
+    optional bytes  rHeapWarnInfo2 =  21059;
+    optional bytes  rHeapWarnInfo3 =  21060;
+    optional bytes  rHeapWarnInfo4 =  21061;
+    optional bytes  rHeapWarnInfo5 =  21062;
+    optional bytes  rHeapWarnInfo6 =  21063;
+
+}
+message BSMUData032 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rHeapWarnInfo0 =  21569;
+    optional bytes  rHeapWarnInfo1 =  21570;
+    optional bytes  rHeapWarnInfo2 =  21571;
+    optional bytes  rHeapWarnInfo3 =  21572;
+    optional bytes  rHeapWarnInfo4 =  21573;
+    optional bytes  rHeapWarnInfo5 =  21574;
+    optional bytes  rHeapWarnInfo6 =  21575;
+}
+message BSMUData033 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rHeapWarnInfo0 =  22081;
+    optional bytes  rHeapWarnInfo1 =  22082;
+    optional bytes  rHeapWarnInfo2 =  22083;
+    optional bytes  rHeapWarnInfo3 =  22084;
+    optional bytes  rHeapWarnInfo4 =  22085;
+    optional bytes  rHeapWarnInfo5 =  22086;
+    optional bytes  rHeapWarnInfo6 =  22087;
+}
+
+message BSMUData040 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rHeapFaultInfo0 =  20561;
+    optional bytes  rHeapFaultInfo1 =  20562;
+    optional bytes  rHeapFaultInfo2 =  20563;
+    optional bytes  rHeapFaultInfo3 =  20564;
+    optional bytes  rHeapFaultInfo4 =  20565;
+    optional bytes  rHeapFaultInfo5 =  20566;
+}
+message BSMUData041 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rHeapFaultInfo0 =  21073;
+    optional bytes  rHeapFaultInfo1 =  21074;
+    optional bytes  rHeapFaultInfo2 =  21075;
+    optional bytes  rHeapFaultInfo3 =  21076;
+    optional bytes  rHeapFaultInfo4 =  21077;
+    optional bytes  rHeapFaultInfo5 =  21078;
+}
+message BSMUData042 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+
+    optional bytes  rHeapFaultInfo0 =  21585;
+    optional bytes  rHeapFaultInfo1 =  21586;
+    optional bytes  rHeapFaultInfo2 =  21587;
+    optional bytes  rHeapFaultInfo3 =  21588;
+    optional bytes  rHeapFaultInfo4 =  21589;
+    optional bytes  rHeapFaultInfo5 =  21590;
+}
+message BSMUData043 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rHeapFaultInfo0 =  22097;
+    optional bytes  rHeapFaultInfo1 =  22098;
+    optional bytes  rHeapFaultInfo2 =  22099;
+    optional bytes  rHeapFaultInfo3 =  22100;
+    optional bytes  rHeapFaultInfo4 =  22101;
+    optional bytes  rHeapFaultInfo5 =  22102;
+}
+
+
+
+
+//********************************************  BECU ***************************************88
+
+message BECUData010 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWorkingStatus =  24578;
+    optional bytes  rBatteryPackVoltage =  24579;
+    optional bytes  rBatteryPackCurrent =  24580;
+    optional bytes  rBatteryPackSOC =  24581;
+}
+message BECUData011 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWorkingStatus =  26626;
+    optional bytes  rBatteryPackVoltage =  26627;
+    optional bytes  rBatteryPackCurrent =  26628;
+    optional bytes  rBatteryPackSOC =  26629;
+}
+message BECUData012 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWorkingStatus =  28674;
+    optional bytes  rBatteryPackVoltage =  28675;
+    optional bytes  rBatteryPackCurrent =  28676;
+    optional bytes  rBatteryPackSOC =  28677;
+
+}
+message BECUData013 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWorkingStatus =  30722;
+    optional bytes  rBatteryPackVoltage =  30723;
+    optional bytes  rBatteryPackCurrent =  30724;
+    optional bytes  rBatteryPackSOC =  30725;
+}
+message BECUData014 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWorkingStatus =  32770;
+    optional bytes  rBatteryPackVoltage =  32771;
+    optional bytes  rBatteryPackCurrent =  32772;
+    optional bytes  rBatteryPackSOC =  32773;
+}
+message BECUData015 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWorkingStatus =  34818;
+    optional bytes  rBatteryPackVoltage =  34819;
+    optional bytes  rBatteryPackCurrent =  34820;
+    optional bytes  rBatteryPackSOC =  34821;
+}
+message BECUData016 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWorkingStatus =  36866;
+    optional bytes  rBatteryPackVoltage =  36867;
+    optional bytes  rBatteryPackCurrent =  36868;
+    optional bytes  rBatteryPackSOC =  36869;
+
+}
+message BECUData017 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWorkingStatus =  38914;
+    optional bytes  rBatteryPackVoltage =  38915;
+    optional bytes  rBatteryPackCurrent =  38916;
+    optional bytes  rBatteryPackSOC =  38917;
+}
+
+
+message BECUData020 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackAverageTemperature =  24582;
+    optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  24583;
+    optional bytes  rBatteryPackSingleEctionVoltageMaximum =  24584;
+    optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  24585;
+    optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  24586;
+    optional bytes  rBatteryPackVoltageMinimum =  24587;
+    optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  24588;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  24589;
+    optional bytes  rBRatteryPackTemperatureMaximum =  24590;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  24591;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  24592;
+    optional bytes  rBatteryPackTemperatureMinimum =  24593;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  24594;
+    optional bytes  rBatteryPackChargingCurrentLimit =  24595;
+    optional bytes  rBatteryPackDischargeCurrentLimit =  24596;
+    optional bytes  rBatteryHistoryChargingPowerLow =  24597;
+    optional bytes  rBatteryHistoryChargingPowerHigh =  24598;
+    optional bytes  rBtteryHistoryDischargePowerLow =  24599;
+    optional bytes  rBatteryHistoryDischargePowerHigh =  24600;
+}
+message BECUData021 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackAverageTemperature =  26630;
+    optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  26631;
+    optional bytes  rBatteryPackSingleEctionVoltageMaximum =  26632;
+    optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  26633;
+    optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  26634;
+    optional bytes  rBatteryPackVoltageMinimum =  26635;
+    optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  26636;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  26637;
+    optional bytes  rBRatteryPackTemperatureMaximum =  26638;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  26639;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  26640;
+    optional bytes  rBatteryPackTemperatureMinimum =  26641;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  26642;
+    optional bytes  rBatteryPackChargingCurrentLimit =  26643;
+    optional bytes  rBatteryPackDischargeCurrentLimit =  26644;
+    optional bytes  rBatteryHistoryChargingPowerLow =  26645;
+    optional bytes  rBatteryHistoryChargingPowerHigh =  26646;
+    optional bytes  rBtteryHistoryDischargePowerLow =  26647;
+    optional bytes  rBatteryHistoryDischargePowerHigh =  26648;
+}
+message BECUData022 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackAverageTemperature =  28678;
+    optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  28679;
+    optional bytes  rBatteryPackSingleEctionVoltageMaximum =  28680;
+    optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  28681;
+    optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  28682;
+    optional bytes  rBatteryPackVoltageMinimum =  28683;
+    optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  28684;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  28685;
+    optional bytes  rBRatteryPackTemperatureMaximum =  28686;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  28687;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  28688;
+    optional bytes  rBatteryPackTemperatureMinimum =  28689;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  28690;
+    optional bytes  rBatteryPackChargingCurrentLimit =  28691;
+    optional bytes  rBatteryPackDischargeCurrentLimit =  28692;
+    optional bytes  rBatteryHistoryChargingPowerLow =  28693;
+    optional bytes  rBatteryHistoryChargingPowerHigh =  28694;
+    optional bytes  rBtteryHistoryDischargePowerLow =  28695;
+    optional bytes  rBatteryHistoryDischargePowerHigh =  28696;
+}
+message BECUData023 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackAverageTemperature =  30726;
+    optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  30727;
+    optional bytes  rBatteryPackSingleEctionVoltageMaximum =  30728;
+    optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  30729;
+    optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  30730;
+    optional bytes  rBatteryPackVoltageMinimum =  30731;
+    optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  30732;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  30733;
+    optional bytes  rBRatteryPackTemperatureMaximum =  30734;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  30735;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  30736;
+    optional bytes  rBatteryPackTemperatureMinimum =  30737;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  30738;
+    optional bytes  rBatteryPackChargingCurrentLimit =  30739;
+    optional bytes  rBatteryPackDischargeCurrentLimit =  30740;
+    optional bytes  rBatteryHistoryChargingPowerLow =  30741;
+    optional bytes  rBatteryHistoryChargingPowerHigh =  30742;
+    optional bytes  rBtteryHistoryDischargePowerLow =  30743;
+    optional bytes  rBatteryHistoryDischargePowerHigh =  30744;
+}
+message BECUData024 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackAverageTemperature =  32774;
+    optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  32775;
+    optional bytes  rBatteryPackSingleEctionVoltageMaximum =  32776;
+    optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  32777;
+    optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  32778;
+    optional bytes  rBatteryPackVoltageMinimum =  32779;
+    optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  32780;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  32781;
+    optional bytes  rBRatteryPackTemperatureMaximum =  32782;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  32783;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  32784;
+    optional bytes  rBatteryPackTemperatureMinimum =  32785;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  32786;
+    optional bytes  rBatteryPackChargingCurrentLimit =  32787;
+    optional bytes  rBatteryPackDischargeCurrentLimit =  32788;
+    optional bytes  rBatteryHistoryChargingPowerLow =  32789;
+    optional bytes  rBatteryHistoryChargingPowerHigh =  32790;
+    optional bytes  rBtteryHistoryDischargePowerLow =  32791;
+    optional bytes  rBatteryHistoryDischargePowerHigh =  32792;
+}
+message BECUData025 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackAverageTemperature =  34822;
+    optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  34823;
+    optional bytes  rBatteryPackSingleEctionVoltageMaximum =  34824;
+    optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  34825;
+    optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  34826;
+    optional bytes  rBatteryPackVoltageMinimum =  34827;
+    optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  34828;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  34829;
+    optional bytes  rBRatteryPackTemperatureMaximum =  34830;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  34831;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  34832;
+    optional bytes  rBatteryPackTemperatureMinimum =  34833;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  34834;
+    optional bytes  rBatteryPackChargingCurrentLimit =  34835;
+    optional bytes  rBatteryPackDischargeCurrentLimit =  34836;
+    optional bytes  rBatteryHistoryChargingPowerLow =  34837;
+    optional bytes  rBatteryHistoryChargingPowerHigh =  34838;
+    optional bytes  rBtteryHistoryDischargePowerLow =  34839;
+    optional bytes  rBatteryHistoryDischargePowerHigh =  34840;
+}
+message BECUData026 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackAverageTemperature =  36870;
+    optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  36871;
+    optional bytes  rBatteryPackSingleEctionVoltageMaximum =  36872;
+    optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  36873;
+    optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  36874;
+    optional bytes  rBatteryPackVoltageMinimum =  36875;
+    optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  36876;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  36877;
+    optional bytes  rBRatteryPackTemperatureMaximum =  36878;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  36879;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  36880;
+    optional bytes  rBatteryPackTemperatureMinimum =  36881;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  36882;
+    optional bytes  rBatteryPackChargingCurrentLimit =  36883;
+    optional bytes  rBatteryPackDischargeCurrentLimit =  36884;
+    optional bytes  rBatteryHistoryChargingPowerLow =  36885;
+    optional bytes  rBatteryHistoryChargingPowerHigh =  36886;
+    optional bytes  rBtteryHistoryDischargePowerLow =  36887;
+    optional bytes  rBatteryHistoryDischargePowerHigh =  36888;
+}
+message BECUData027 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackAverageTemperature =  38918;
+    optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  38919;
+    optional bytes  rBatteryPackSingleEctionVoltageMaximum =  38920;
+    optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  38921;
+    optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  38922;
+    optional bytes  rBatteryPackVoltageMinimum =  38923;
+    optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  38924;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  38925;
+    optional bytes  rBRatteryPackTemperatureMaximum =  38926;
+    optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  38927;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  38928;
+    optional bytes  rBatteryPackTemperatureMinimum =  38929;
+    optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  38930;
+    optional bytes  rBatteryPackChargingCurrentLimit =  38931;
+    optional bytes  rBatteryPackDischargeCurrentLimit =  38932;
+    optional bytes  rBatteryHistoryChargingPowerLow =  38933;
+    optional bytes  rBatteryHistoryChargingPowerHigh =  38934;
+    optional bytes  rBtteryHistoryDischargePowerLow =  38935;
+    optional bytes  rBatteryHistoryDischargePowerHigh =  38936;
+}
+
+
+message BECUData030 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWarning0 =  24640;
+    optional bytes  rBatteryPackWarning1 =  24641;
+    optional bytes  rBatteryPackFailure0 =  24642;
+    optional bytes  rBatteryPackFailure1 =  24643;
+}
+message BECUData031 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWarning0 =  26688;
+    optional bytes  rBatteryPackWarning1 =  26689;
+    optional bytes  rBatteryPackFailure0 =  26690;
+    optional bytes  rBatteryPackFailure1 =  26691;
+}
+message BECUData032 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWarning0 =  28736;
+    optional bytes  rBatteryPackWarning1 =  28737;
+    optional bytes  rBatteryPackFailure0 =  28738;
+    optional bytes  rBatteryPackFailure1 =  28739;
+}
+message BECUData033 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWarning0 =  30784;
+    optional bytes  rBatteryPackWarning1 =  30785;
+    optional bytes  rBatteryPackFailure0 =  30786;
+    optional bytes  rBatteryPackFailure1 =  30787;
+}
+message BECUData034 {
+    optional bytes  rBatteryPackWarning0 =  32832;
+    optional bytes  rBatteryPackWarning1 =  32833;
+    optional bytes  rBatteryPackFailure0 =  32834;
+    optional bytes  rBatteryPackFailure1 =  32835;
+}
+message BECUData035 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWarning0 =  34880;
+    optional bytes  rBatteryPackWarning1 =  34881;
+    optional bytes  rBatteryPackFailure0 =  34882;
+    optional bytes  rBatteryPackFailure1 =  34883;
+}
+message BECUData036 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWarning0 =  36928;
+    optional bytes  rBatteryPackWarning1 =  36929;
+    optional bytes  rBatteryPackFailure0 =  36930;
+    optional bytes  rBatteryPackFailure1 =  36931;
+}
+message BECUData037 {
+    optional int32 slaveId = 1;
+    optional int32 readOrWrite = 101;
+    optional string terminalId = 102;
+
+    optional bytes  rBatteryPackWarning0 =  38976;
+    optional bytes  rBatteryPackWarning1 =  38977;
+    optional bytes  rBatteryPackFailure0 =  38978;
+    optional bytes  rBatteryPackFailure1 =  38979;
+}

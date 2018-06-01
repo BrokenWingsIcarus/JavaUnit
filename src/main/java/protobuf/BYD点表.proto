@@ -1,0 +1,4 @@
+message ElectronicTable {
+    optional int32 lower = 4106;
+    optional int32 high =  4107;
+}

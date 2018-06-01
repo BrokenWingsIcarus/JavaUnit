@@ -11,7 +11,7 @@ public class Analog {
     /**
      * 地址
      */
-    private String devCode;
+    private Integer devCode;
 
     private String type;
 
@@ -32,12 +32,12 @@ public class Analog {
         this.name = name;
     }
 
-    public String getDevCode() {
+    public Integer getDevCode() {
         return devCode;
     }
 
-    public void setDevCode(Integer devCode) {
-        this.devCode = devCode.toString();
+    public void setDevCode(Integer  devCode) {
+        this.devCode = devCode;
     }
 
     @Override

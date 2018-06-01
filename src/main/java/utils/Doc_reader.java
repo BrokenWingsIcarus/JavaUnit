@@ -17,20 +17,24 @@ public class Doc_reader {
         ArrayList<Analog[]> tableMessage = new ArrayList<>();
         System.out.println(tables.size());
         for (XWPFTable table : tables) {
-            List<ArrayList<String>> rows = FileUtils.rowContent(table);
+            List<ArrayList<String>> rows = utils.FileUtils.rowContent(table);
             Analog = new Analog[rows.size()];
             for (int i = 0; i < rows.size(); i++){
-                Analog[i]  = new Analog();
                 ArrayList<String> list = rows.get(i);
-                Analog[i].setDevCode(Integer.decode(list.get(0)));
-                Analog[i].setType(list.get(3));
-                Analog[i].setName(varName.get(list.get(2)));
+                if(list.get(0).isEmpty()) {
+                    continue;
+                }
+                Analog[i]  = new Analog();
+                Analog[i].setDevCode(Integer.decode(list.get(0)) + 1);
+                Analog[i].setType(ProtoUtils.getType(list.get(2)));
+                Analog[i].setName(varName.get(list.get(1)));
                 String s = list.get(0);
                 if(s.length() == 0) {
                     System.out.println("-------------------" + list.get(i)+ Analog);
                 }
+                tableMessage.add(Analog);
             }
-            tableMessage.add(Analog);
+
         }
         return tableMessage;
     }

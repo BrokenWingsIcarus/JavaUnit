@@ -1,16 +1,200 @@
-message Stack010 { 
+message UC0 { 
 
-   optional int32 slaveId=10001;
-   optional int32 readOrWrite=10101;
-   optional string terminalId=10102;
+   optional int32 slaveId=100;
+   optional int32 readOrWrite=101;
+   optional string terminalId=102;
 
-   optional bytes  rBatteryStackStatus =  2;
-   optional float  rBatteryStackSOC =  3;
-   optional float  rBatteryStackSOH =  5;
-   optional float  rBatteryStackRechargeable =  7;
-   optional float  rBatteryStackDischargeCapacity =  9;
-   optional float  rAccumulatorBatteryChargeAccumulationValue =  11;
-   optional float  AccumulativeValueOfBatteryStackDischarge =  13;
-   optional float  BatteryStackTotalVoltage =  15;
-   optional float  rBatteryStackTotalCurrent =  17;
+   optional bytes  rBatteryPackAverageTemperature =  24583;
+   optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  24584;
+   optional bytes  rBatteryPackSingleEctionVoltageMaximum =  24585;
+   optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  24586;
+   optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  24587;
+   optional bytes  rBatteryPackVoltageMinimum =  24588;
+   optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  24589;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  24590;
+   optional bytes  rBatteryPackTemperatureMaximum =  24591;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  24592;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  24593;
+   optional bytes  rBatteryPackTemperatureMinimum =  24594;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  24595;
+   optional bytes  rBatteryPackChargingCurrentLimit =  24596;
+   optional bytes  rBatteryPackDischargeCurrentLimit =  24597;
+   optional bytes  rBatteryHistoryChargingPowerLow =  24598;
+   optional bytes  rBatteryHistoryChargingPowerHigh =  24599;
+   optional bytes  rBatteryHistoryDischargePowerLow =  24600;
+}
+message UC1 { 
+
+   optional int32 slaveId=100;
+   optional int32 readOrWrite=101;
+   optional string terminalId=102;
+
+   optional bytes  rBatteryPackAverageTemperature =  26631;
+   optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  26632;
+   optional bytes  rBatteryPackSingleEctionVoltageMaximum =  26633;
+   optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  26634;
+   optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  26635;
+   optional bytes  rBatteryPackVoltageMinimum =  26636;
+   optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  26637;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  26638;
+   optional bytes  rBatteryPackTemperatureMaximum =  26639;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  26640;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  26641;
+   optional bytes  rBatteryPackTemperatureMinimum =  26642;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  26643;
+   optional bytes  rBatteryPackChargingCurrentLimit =  26644;
+   optional bytes  rBatteryPackDischargeCurrentLimit =  26645;
+   optional bytes  rBatteryHistoryChargingPowerLow =  26646;
+   optional bytes  rBatteryHistoryChargingPowerHigh =  26647;
+   optional bytes  rBatteryHistoryDischargePowerLow =  26648;
+}
+message UC2 { 
+
+   optional int32 slaveId=100;
+   optional int32 readOrWrite=101;
+   optional string terminalId=102;
+
+   optional bytes  rBatteryPackAverageTemperature =  28679;
+   optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  28680;
+   optional bytes  rBatteryPackSingleEctionVoltageMaximum =  28681;
+   optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  28682;
+   optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  28683;
+   optional bytes  rBatteryPackVoltageMinimum =  28684;
+   optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  28685;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  28686;
+   optional bytes  rBatteryPackTemperatureMaximum =  28687;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  28688;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  28689;
+   optional bytes  rBatteryPackTemperatureMinimum =  28690;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  28691;
+   optional bytes  rBatteryPackChargingCurrentLimit =  28692;
+   optional bytes  rBatteryPackDischargeCurrentLimit =  28693;
+   optional bytes  rBatteryHistoryChargingPowerLow =  28694;
+   optional bytes  rBatteryHistoryChargingPowerHigh =  28695;
+   optional bytes  rBatteryHistoryDischargePowerLow =  28696;
+}
+message UC3 { 
+
+   optional int32 slaveId=100;
+   optional int32 readOrWrite=101;
+   optional string terminalId=102;
+
+   optional bytes  rBatteryPackAverageTemperature =  30727;
+   optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  30728;
+   optional bytes  rBatteryPackSingleEctionVoltageMaximum =  30729;
+   optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  30730;
+   optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  30731;
+   optional bytes  rBatteryPackVoltageMinimum =  30732;
+   optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  30733;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  30734;
+   optional bytes  rBatteryPackTemperatureMaximum =  30735;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  30736;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  30737;
+   optional bytes  rBatteryPackTemperatureMinimum =  30738;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  30739;
+   optional bytes  rBatteryPackChargingCurrentLimit =  30740;
+   optional bytes  rBatteryPackDischargeCurrentLimit =  30741;
+   optional bytes  rBatteryHistoryChargingPowerLow =  30742;
+   optional bytes  rBatteryHistoryChargingPowerHigh =  30743;
+   optional bytes  rBatteryHistoryDischargePowerLow =  30744;
+}
+message UC4 { 
+
+   optional int32 slaveId=100;
+   optional int32 readOrWrite=101;
+   optional string terminalId=102;
+
+   optional bytes  rBatteryPackAverageTemperature =  32775;
+   optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  32776;
+   optional bytes  rBatteryPackSingleEctionVoltageMaximum =  32777;
+   optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  32778;
+   optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  32779;
+   optional bytes  rBatteryPackVoltageMinimum =  32780;
+   optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  32781;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  32782;
+   optional bytes  rBatteryPackTemperatureMaximum =  32783;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  32784;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  32785;
+   optional bytes  rBatteryPackTemperatureMinimum =  32786;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  32787;
+   optional bytes  rBatteryPackChargingCurrentLimit =  32788;
+   optional bytes  rBatteryPackDischargeCurrentLimit =  32789;
+   optional bytes  rBatteryHistoryChargingPowerLow =  32790;
+   optional bytes  rBatteryHistoryChargingPowerHigh =  32791;
+   optional bytes  rBatteryHistoryDischargePowerLow =  32792;
+}
+message UC5 { 
+
+   optional int32 slaveId=100;
+   optional int32 readOrWrite=101;
+   optional string terminalId=102;
+
+   optional bytes  rBatteryPackAverageTemperature =  34823;
+   optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  34824;
+   optional bytes  rBatteryPackSingleEctionVoltageMaximum =  34825;
+   optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  34826;
+   optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  34827;
+   optional bytes  rBatteryPackVoltageMinimum =  34828;
+   optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  34829;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  34830;
+   optional bytes  rBatteryPackTemperatureMaximum =  34831;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  34832;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  34833;
+   optional bytes  rBatteryPackTemperatureMinimum =  34834;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  34835;
+   optional bytes  rBatteryPackChargingCurrentLimit =  34836;
+   optional bytes  rBatteryPackDischargeCurrentLimit =  34837;
+   optional bytes  rBatteryHistoryChargingPowerLow =  34838;
+   optional bytes  rBatteryHistoryChargingPowerHigh =  34839;
+   optional bytes  rBatteryHistoryDischargePowerLow =  34840;
+}
+message UC6 { 
+
+   optional int32 slaveId=100;
+   optional int32 readOrWrite=101;
+   optional string terminalId=102;
+
+   optional bytes  rBatteryPackAverageTemperature =  36871;
+   optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  36872;
+   optional bytes  rBatteryPackSingleEctionVoltageMaximum =  36873;
+   optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  36874;
+   optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  36875;
+   optional bytes  rBatteryPackVoltageMinimum =  36876;
+   optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  36877;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  36878;
+   optional bytes  rBatteryPackTemperatureMaximum =  36879;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  36880;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  36881;
+   optional bytes  rBatteryPackTemperatureMinimum =  36882;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  36883;
+   optional bytes  rBatteryPackChargingCurrentLimit =  36884;
+   optional bytes  rBatteryPackDischargeCurrentLimit =  36885;
+   optional bytes  rBatteryHistoryChargingPowerLow =  36886;
+   optional bytes  rBatteryHistoryChargingPowerHigh =  36887;
+   optional bytes  rBatteryHistoryDischargePowerLow =  36888;
+}
+message UC7 { 
+
+   optional int32 slaveId=100;
+   optional int32 readOrWrite=101;
+   optional string terminalId=102;
+
+   optional bytes  rBatteryPackAverageTemperature =  38919;
+   optional bytes  rBatteryPackMaximumVoltageBatteryNumber =  38920;
+   optional bytes  rBatteryPackSingleEctionVoltageMaximum =  38921;
+   optional bytes  rBatteryPackMaximumVoltageBatteryTemperature =  38922;
+   optional bytes  rBatteryPackMinimumVoltageBatteryNumber =  38923;
+   optional bytes  rBatteryPackVoltageMinimum =  38924;
+   optional bytes  rBatteryPackMinimumVoltageBatteryTemperature =  38925;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryNumber =  38926;
+   optional bytes  rBatteryPackTemperatureMaximum =  38927;
+   optional bytes  rBatteryPackMaximumTemperatureBatteryVoltage =  38928;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryNumber =  38929;
+   optional bytes  rBatteryPackTemperatureMinimum =  38930;
+   optional bytes  rBatteryPackMinimumTemperatureBatteryVoltage =  38931;
+   optional bytes  rBatteryPackChargingCurrentLimit =  38932;
+   optional bytes  rBatteryPackDischargeCurrentLimit =  38933;
+   optional bytes  rBatteryHistoryChargingPowerLow =  38934;
+   optional bytes  rBatteryHistoryChargingPowerHigh =  38935;
+   optional bytes  rBatteryHistoryDischargePowerLow =  38936;
 }

@@ -38,18 +38,19 @@ public class FileUtils {
                out.write("message " +  messageName + i + " { \r\n");
                out.write(slaveStatus.toString());
                for (Analog analog : Analogs) {
-                    if(i != 0  && addressOffset != null) {
-                        //System.out.println(Integer.decode(addressOffset));
+                   if(Objects.isNull(analog)) {
+                       continue;
+                   }
+                    if(i > 0  && addressOffset != null) {
                         if(analog != null) {
-                            analog.setDevCode(Integer.parseInt(analog.getDevCode()));
+                            analog.setDevCode(analog.getDevCode() + Integer.decode(addressOffset));
                         }
-
                     }
-
                     out.write(analog.toString());
                 }
                 out.write("}\r\n");
            }
+
            out.flush();
            out.close();
         } else  {
